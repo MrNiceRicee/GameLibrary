@@ -4,8 +4,103 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"> 
 
-<h:head></h:head> 
-<body> 
+<h:head>
 
-</body> 
+	<style>
+		.bodyback{
+			background-color: rgba(14,30,31,1);
+		}
+		.maindiv{
+			margin: 0;
+			padding: 5px;
+			top: 50%;
+			left: 50%;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			position: absolute;
+			display: flex;
+			flex-direction: row;
+			width: auto;
+			height: auto;
+			margin: auto auto;
+			background-color: rgba(230,230,230,.3);;
+			border-radius: 4px;
+			box-shadow: 3px 4px 0px -1px rgba(0,0,0,.2);
+			transition: all 1s ease-in-out;
+		}
+		.order-table{
+			border-collapse: collapse;
+			color: rgba(255,255,255,1);
+		}
+		
+		.order-table-header{
+			text-align: center;
+			background: non repeat scroll;
+			background-color: rgba(0,0,0,0);
+			border-bottom: 1px solid #BBBBBB;
+			padding: 16px;
+		}
+		
+		.order-table-odd-row{
+			text-align: center;
+			background-color: rgba(0,0,0,0);
+		}
+		
+		.order-table-even-row{
+			text-align: center;
+			background-color: rgba(0,0,0,0);
+		}
+		
+		.order-table-odd-row:hover{
+			background-color: rgba(255,255,255,.5);
+			color: rgba(0,0,0,.7);
+		}
+		
+		.order-table-even-row:hover{
+			background-color: rgba(255,255,255,.5);
+			color: rgba(0,0,0,.7);			
+		}
+		
+	</style>
+</h:head> 
+	<h:body class="bodyback"> 
+		<div class="maindiv">
+			<h:dataTable value="#{formController.service.games}" var="o" styleClass="order-table" headerClass="order-table-header" rowClasses="order-table-odd-row,order-table-even-row">
+				<h:column>
+					<f:facet name="header">Game Name</f:facet>
+					#{o.name}
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">Studio</f:facet>
+					#{o.studio}
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">Genre</f:facet>
+					#{o.genre}
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">Price</f:facet>
+					#{o.price}
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">Date Published</f:facet>
+					#{o.datePublished}
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">Ratings</f:facet>
+					#{o.ratings}
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">Games sold</f:facet>
+					#{o.itemSold}
+				</h:column>
+			</h:dataTable>
+		</div>	
+	</h:body> 
 </html>

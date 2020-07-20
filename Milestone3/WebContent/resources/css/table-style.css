@@ -1,0 +1,30 @@
+.order-table{
+	border-collapse: collapse;
+}
+
+.order-table-header{
+	text-align: center;
+	background: non repeat scroll;
+	background-color: rgba(0,0,0,0);
+	border-bottom: 1px solid #BBBBBB;
+	padding: 16px;
+}
+
+.order-table-odd-row{
+	text-align: center;
+	background-color: rgba(0,0,0,0);
+}
+
+.order-table-even-row{
+	text-align: center;
+	background-color: rgba(0,0,0,0);
+}
+
+.order-table-odd-row:hover{
+	background-color: rgba(138,212,150,.5);
+}
+
+.order-table-even-row:hover{
+	background-color: rgba(138,212,150,.5);
+}
+
