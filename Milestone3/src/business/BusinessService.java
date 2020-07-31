@@ -4,6 +4,7 @@ import java.io.Console;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.ejb.EJB;
 import javax.ejb.Local;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
@@ -11,6 +12,9 @@ import javax.enterprise.inject.Alternative;
 
 import beans.CustomRandomizer;
 import beans.Game;
+import beans.User;
+import data.GameDataService;
+import data.UserDataService;
 
 /**
  * Session Bean implementation class BusinessService
@@ -21,10 +25,16 @@ import beans.Game;
 @Alternative
 public class BusinessService implements BusinessInterface {
 
+	@EJB
+	UserDataService userservice;
+	
+	@EJB
+	GameDataService gameservice;
+	
 	List<Game> games = new ArrayList<Game>();
 	
     public BusinessService() {
-        games.addAll(new CustomRandomizer().generateGames(20));
+        //games.addAll(new CustomRandomizer().generateGames(20));
         System.out.println("There are "+games.size()+" games generated");
     }
 
@@ -36,7 +46,12 @@ public class BusinessService implements BusinessInterface {
 
 	@Override
 	public List<Game> getGames() {
-		return games;
+		return gameservice.findAll();
+	}
+
+	@Override
+	public void createUser(User user) {
+		userservice.create(user);
 	}
 
 }

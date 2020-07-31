@@ -202,42 +202,43 @@
         		<br></br>
         		<h:form>
     			    <div>
-						<h:inputText class="userinput" value="#{user.firstname}"  p:placeholder="" />
+						<h:inputText class="userinput" value="#{user.firstname}"  p:placeholder="" /> <h:message for="firstName"/>
 	       			    <label class="customPlaceHolder">First name</label>       			
 	       			</div>
         			<div>
-						<h:inputText class="userinput" value="#{user.lastname}"  p:placeholder="" />
+						<h:inputText class="userinput" value="#{user.lastname}"  p:placeholder="" /> <h:message for="firstName"/>
 	       			    <label class="customPlaceHolder">Last name</label>       			
 	       			</div>
 	       			<div>
-						<h:inputText class="userinput" value="#{user.age}"  p:placeholder="" />
+						<h:inputText class="userinput" value="#{user.age}"  p:placeholder="" /> <h:message for="firstName"/>
 	       			    <label class="customPlaceHolder">Age</label>       			
 	       			</div>
 	       			<div>
-						<h:inputText class="userinput" value="#{user.phoneNumber}"  p:placeholder="" />
+						<h:inputText class="userinput" value="#{user.phoneNumber}"  p:placeholder="" /> <h:message for="firstName"/>
 	       			    <label class="customPlaceHolder">Phone number</label>       			
 	       			</div>
 	       			<div>
-						<h:inputText class="userinput" value="#{user.address}"  p:placeholder="" />
+						<h:inputText class="userinput" value="#{user.address}"  p:placeholder="" /> <h:message for="firstName"/>
 	       			    <label class="customPlaceHolder">Address</label>       			
 	       			</div>
 	       			<div>
-						<h:inputText class="userinput" value="#{user.email}"  p:placeholder="" />
+						<h:inputText class="userinput" value="#{user.email}"  p:placeholder="" /> <h:message for="firstName"/>
 	       			    <label class="customPlaceHolder">E-mail</label>       			
 	       			</div>
 	       			<div>
-						<h:inputText class="userinput" value="#{user.userName}"  p:placeholder="" />
+						<h:inputText class="userinput" value="#{user.userName}"  p:placeholder="" /> <h:message for="firstName"/>
 	       			    <label class="customPlaceHolder">Username</label>       			
 	       			</div>
 	       			<div>
-						<h:inputText class="userinput" value="#{user.password}"  p:placeholder="" />
+						<h:inputText class="userinput" value="#{user.password}"  p:placeholder="" /> <h:message for="firstName"/>
 	       			    <label class="customPlaceHolder">Password</label>       			
 	       			</div>
 	       			<br></br>
-	    			<h:commandButton class="button" action="#{formController.index()}" value="Submit" />  
+	    			<h:commandButton class="button" action="#{formController.userJustRegistered(user)}" value="Submit" />  
 	    			<br></br>
-	    			<p>Already have an account?</p>	<h:commandLink action="#{formController.index()}" value="Log-in" />
+	    			<p>Already have an account?</p>	<h:link action="LoginPage.xhtml" value="Log-in" />
         		</h:form>
+        		<h:messages />
         	</div>
         </div>
 	</div>

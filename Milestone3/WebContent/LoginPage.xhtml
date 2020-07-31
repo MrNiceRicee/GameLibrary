@@ -225,10 +225,11 @@
 						<h:inputText class="userinput" value="#{user.password}"></h:inputText>
 	       			    <label class="customPlaceHolder">Password</label>       			
 	       			</div>
-	       			<br></br>
+	       			<br></br>	       			
 	    			<h:commandButton class="button" action="#{formController.onSubmit(user)}" value="Submit" />  
 	    			<br></br>
-	    			<p>Don't have an account?</p>	<h:commandLink action="#{formController.register()}" value="Register" />
+	    			Don't have an account?
+	    			<h:link  value="Register" outcome="Register.xhtml" class="customButton"/>
 	       		</div>
 	        </div>
 		</div>

@@ -84,5 +84,8 @@ public class Game {
 		this.playCount = playCount;
 	}
 	
-	
+	public String getInsert() {
+		return "INSERT INTO \"GameLibrary\".\"Games\" (id, \"GAME_NAME\", \"STUDIO\", \"GENRE\", \"PRICE\", \"DATE_PUBLISHED\", \"RATINGS\", \"ITEMS_SOLD\", \"PLAY_COUNT\") VALUES (DEFAULT, '"+this.name
+				+"', '"+this.studio+"','"+this.genre+"', "+this.price+", '"+this.datePublished+"', "+this.ratings+", "+this.itemSold+", "+this.playCount+");";
+	}
 }

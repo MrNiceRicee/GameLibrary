@@ -44,7 +44,7 @@ public class User {
 	public User() {
 		this.firstname = "";
 		this.lastname = "";
-		this.age = -1;
+		this.age = 0;
 		this.phoneNumber = "";
 		this.address = "";
 		this.email = "";
@@ -52,6 +52,7 @@ public class User {
 		this.password = "";
 	}
 
+	
 	public String getFirstname() {
 		return firstname;
 	}
@@ -80,10 +81,10 @@ public class User {
 		return phoneNumber;
 	}
 
-	public void setPhonenumber(String phonenumber) {
-		this.phoneNumber = phonenumber;
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
-	
+
 	public String getAddress() {
 		return address;
 	}
@@ -115,6 +116,7 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
 	
 	
 	
